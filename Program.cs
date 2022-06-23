@@ -17,18 +17,26 @@
 
             Console.WriteLine("Il mio peggior piatto preferito è " + cibiPreferiti[cibiPreferiti.Length - 1]);
 
-            //  Console.WriteLine("Inserisci il tuo cibo preferito:");
-            //  string userFood = Console.ReadLine();
-            string userFood = "";
+           // Console.WriteLine("Inserisci il tuo cibo preferito:");
+           // string userFood = Console.ReadLine();
+           string userFood = "";
             bool exist = true;
             do
             {
 
                 Console.WriteLine("Inserisci il tuo cibo preferito:");
                 userFood = Console.ReadLine();
-                exist = false;
-            } while (!exist);
-
+                for (int i = 0; i < cibiPreferiti.Length; i++)
+                {
+                    if(userFood == cibiPreferiti[i])
+                    {
+                        exist = false;
+                    }
+                    
+                }
+                
+            } while (exist);
+         
 
 
             int foodLength = cibiPreferiti.Length;
